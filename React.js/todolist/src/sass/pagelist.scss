@@ -1,0 +1,32 @@
+
+.page-list{
+    margin: 50px 0px;
+
+    .pl-title{
+        font-size: 3rem;
+        margin-bottom:25px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 250ms ease-in-out;
+        border-radius: 25px;
+        padding: $cube*2;
+        display: flex;
+        border: 5px solid;
+        border-color: $blue4;
+
+        .chevron-toggle{
+            padding-right: $cube*2;
+            width: 100%;
+            text-align:right;
+        }
+    }
+
+    .pl-title:hover{
+        background: $blue2;
+        border-color: $blue2;
+    }
+    .pl-title.open{
+        background: $blue2;
+        border-color: $blue2;
+    }
+}

@@ -1,0 +1,19 @@
+<div class="todo" [class.done]="toDo$.status">
+    <div class="todo-content">
+        <div class="handle leftside-buttons">
+            <fa-icon [icon]="faGrip"></fa-icon>
+        </div>
+        <div class="todo-content-check">
+            <img src="./assets/svg/checkbox-empty.svg" *ngIf="!toDo$.status" (click)="changeCheck($event)">
+            <img src="./assets/svg/checkbox-done.svg" *ngIf="toDo$.status" (click)="changeCheck($event)">
+        </div>
+        <div class="todo-content-title">
+            <input type="text" (blur)="changeLabel($event)" [(ngModel)]="toDo$.label" placeholder="Name des ToDo-Punkes" [disabled]="toDo$.status">
+        </div>
+    </div>
+    <div class="delete" (click)="deleteToDo($event)">
+        <span>
+            <fa-icon [icon]="faTrash"></fa-icon>
+        </span>
+    </div>
+</div>

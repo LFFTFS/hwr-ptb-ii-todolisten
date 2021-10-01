@@ -1,0 +1,62 @@
+@import "~bootstrap/scss/bootstrap";
+
+@import './sass/_var.scss';
+
+@import './sass/header.scss';
+@import './sass/pagelist.scss';
+@import './sass/todo.scss';
+@import './sass/todo-form.scss';
+
+@font-face{
+    font-family: "Lato";
+    src: url('./assets/fonts/Lato/Lato-Regular.ttf') format("truetype");
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "Lato";
+    src: url('./assets/fonts/Lato/Lato-Bold.ttf') format("truetype");
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: "NotoSansJP";
+    src: url('./assets/fonts/Noto_Sans_JP/NotoSansJP-Regular.otf') format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "NotoSansJP";
+    src: url('./assets/fonts/Noto_Sans_JP/NotoSansJP-Bold.otf') format("opentype");
+    font-weight: bold;
+}
+
+.app{
+    main.content-main{
+        position: relative;
+        min-height: 20vh;
+        background-color: $white;
+        font-size:2rem;
+        font-family: $font2;
+    }
+}
+
+::selection{
+    background-color: $white;
+    color: $dark1;
+    border-color: $dark1;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    background-color: $white;
+    color: $dark1;
+    font-weight: normal;
+    font-family: $font2 !important;
+}

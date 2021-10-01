@@ -1,0 +1,43 @@
+<app-template-todo-form (ping)="createToDo($event)"></app-template-todo-form>
+
+<div class="container-md">
+    <div class="page-list">
+        <h3 (click)="toDoShow=!toDoShow" class="pl-title justify-content-between" [class.open]="toDoShow">
+            <div class="left">
+                Offen
+                <span class="badge bg-secondary pl-num">{{ $todos.length }}</span>
+            </div>
+            <div class="right">
+                <span class="chevron-toggle">
+                    <fa-icon *ngIf="!toDoShow" [icon]="faDown"></fa-icon>
+                    <fa-icon *ngIf="toDoShow" [icon]="faUp"></fa-icon>
+                </span>
+            </div>
+        </h3>
+        <div *ngIf="toDoShow"  class="todo-elements">
+            <app-template-todo (ping)="update($event)" [toDo$]="toDo" *ngFor="let toDo of $todos"></app-template-todo>
+        </div>
+    </div>
+
+    <hr>
+    
+    <div class="page-list">
+        <h3 (click)="toDoDoneShow=!toDoDoneShow" class="pl-title justify-content-between" [class.open]="toDoDoneShow">
+            <div class="left">
+                Erledigt
+                <span class="badge bg-secondary pl-num">{{ $todosdone.length }}</span>
+            </div>
+            <div class="right">
+                <span class="chevron-toggle">
+                    <fa-icon *ngIf="!toDoDoneShow" [icon]="faDown"></fa-icon>
+                    <fa-icon *ngIf="toDoDoneShow" [icon]="faUp"></fa-icon>
+                </span>
+            </div>
+        </h3>
+        <div *ngIf="toDoDoneShow" class="todo-elements">
+            <app-template-todo (ping)="update($event)" [toDo$]="toDo" *ngFor="let toDo of $todosdone"></app-template-todo>
+        </div>
+    </div>
+</div>
+
+

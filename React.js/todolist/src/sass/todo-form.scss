@@ -1,0 +1,62 @@
+
+.todo-form{
+    margin:50px 0px;
+    justify-content: space-between;
+    align-items: stretch;
+    height: $cube*8;
+    display: flex;
+    width:100%;
+    flex-flow: row;
+
+    .todo-content{
+        font-size: $cube*2;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding-left: 0px;
+
+        input[type=text]{
+            width: 100%;
+            padding: $cube*2;
+            color: $dark1;
+            background: $green5;
+            border: none;
+            word-break: break-word;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            transition: all 250ms ease-in-out;
+        }
+        
+        input::placeholder{
+            opacity:0.6;
+            font-style: italic;
+            color: $dark2;
+        }
+        input:focus{
+            outline: none;
+            background-color: $green4;
+        }
+    }
+    
+    .create{
+        cursor: pointer;
+        padding: $cube*2;
+        font-size: $cube*3;
+        color: $white2;
+        background: $green1;
+        transition: all 250ms ease-in-out;
+        font-weight: bold;
+
+        span{
+            height:100%;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .create:hover{
+        background: $dark1;
+    }
+}

@@ -1,0 +1,13 @@
+
+<div class="container-md">
+    <div class="row todo-form">
+        <div class="todo-content col-11">
+            <input type="text" [(ngModel)]="toDo$.label" (keyup.enter)="createToDo($event)" placeholder="Neuen Todo-Punkt hinzufügen">
+        </div>
+        <div class="create col-1" (click)="createToDo($event)">
+            <span>
+                <fa-icon [icon]="faPlus"></fa-icon>
+            </span>
+        </div>
+    </div>
+</div>
